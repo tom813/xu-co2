@@ -1,20 +1,19 @@
 import Section from '../components/global/section'
 import Layout from '../components/layout/article'
-import { Flex } from "@chakra-ui/react"
+import { Box, Heading } from "@chakra-ui/react"
 
 const Home = () => {
   return (
     <Layout title="Homepage">
-      <Flex
+      <Box
         h="100vh"
-        w="100vw"
-        justifyContent="center"
-        alignItems="center"
+        w="100%"
+        bg="blue"
       >
         <Section>
-
+          <Heading as="h1">Was geht ab</Heading>
         </Section>
-      </Flex>
+      </Box>
     </Layout>
   )
 }
