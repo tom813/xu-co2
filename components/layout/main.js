@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { Box, Container } from "@chakra-ui/react"
+import Navbar from "../global/navbar"
 
 const Layout = ({ children }) => {
     return (
@@ -10,9 +11,9 @@ const Layout = ({ children }) => {
                 <title>Title</title>
             </Head>
 
-            {/* TODO: NAVBAR */}
+            <Navbar />
 
-            <Container maxW="container.md" m={0}>
+            <Container maxW="container.md" m={0} mt="65px">
 
                 {children}
 
