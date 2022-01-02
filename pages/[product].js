@@ -1,5 +1,5 @@
 import {useRouter} from 'next/router'
-import { Box, Flex, Heading, Image, Text, Button } from '@chakra-ui/react'
+import { Box, Flex, Heading, Image, Text, Button, localStorageManager } from '@chakra-ui/react'
 
 const sampleRequests = [
     {
@@ -14,7 +14,7 @@ const sampleRequests = [
         num_of_entries: 123478,
         price: 900
     }
-]
+] 
 
 export async function getStaticPaths(){
     var paths = []
