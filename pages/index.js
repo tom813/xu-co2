@@ -8,10 +8,10 @@ const Home = () => {
       <Box
         h="100vh"
         w="100%"
-        bg="blue"
       >
         <Section>
           <Heading as="h1">Was geht ab</Heading>
+          <Box w="100%" h="200px" bg="blue"></Box>
         </Section>
       </Box>
     </Layout>
