@@ -7,7 +7,7 @@ const Home = () => {
     <Layout title="Homepage">
       <Flex
         h="100vh"
-        w="100vw"
+        w="100%"
         justifyContent="center"
         alignItems="center"
         bg="blue"
