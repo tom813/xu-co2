@@ -1,5 +1,5 @@
 import {Image, Flex, Container, Text, Heading, Center, SimpleGrid} from '@chakra-ui/react';
-import Card from '../../components/branches/card';
+import Card from '../../components/overview/card';
 import Layout from '../../components/layout/article';
 import Section from '../../components/global/section';
 
