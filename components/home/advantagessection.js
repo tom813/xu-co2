@@ -3,10 +3,12 @@ import Card from "./card"
 
 const AdvantagesSection = () => {
     return (
-        <section style={{ height: "95vh", width: "100%" }}>
-            <Flex w="full" h="full" justifyContent="center" alignItems="center" flexDirection="column">
+        <section style={{
+            height: "95vh", width: "100%"
+        }} >
+            <Flex w="full" h="60%" justifyContent="center" alignItems="center" flexDirection="column" zIndex="2">
                 <Heading as="h2" mb="60px">Vorteile</Heading>
-                <Grid templateColumns="repeat(6,1fr)" h="300px" w="full" columnGap="70px">
+                <Grid templateColumns="repeat(6,1fr)" h="300px" w="full" columnGap="70px" zIndex="2">
                     <GridItem colSpan={2}><Card title="Alle Quellen" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestiae quibusdam esse eaque impedit a!" icon="/images/icons/computer-front-color.png" /></GridItem>
                     <GridItem colSpan={2}><Card title="Alle Plattformen" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestiae quibusdam esse eaque impedit a!" icon="/images/icons/sheild-front-color.png" /></GridItem>
                     <GridItem colSpan={2}><Card title="Alle Sprachen" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestiae quibusdam esse eaque impedit a!" icon="/images/icons/notify-heart-front-color.png" /></GridItem>

@@ -36,6 +36,7 @@ const Navbar = () => {
             boxShadow={scrolled ? bs : "none"}
             transform={scrolled ? "scale(1.003)" : "none"}
             transition="400ms ease"
+            zIndex="3"
         >
             <Grid templateColumns="repeat(6, 1fr)" w="100%" h="100%">
                 <GridItem colSpan={3}>
