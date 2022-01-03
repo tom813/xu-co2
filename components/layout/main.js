@@ -13,7 +13,7 @@ const Layout = ({ children }) => {
 
             <Navbar />
 
-            <Container maxW="container.md" m={0} mt="65px">
+            <Container maxW="container.lg" m={0} mt="65px">
 
                 {children}
 
