@@ -3,7 +3,6 @@ import Layout from '../components/layout/article'
 import { Flex } from "@chakra-ui/react"
 import HookSection from '../components/home/hooksection'
 import AdvantagesSection from '../components/home/advantagessection'
-import ScrollAnimation from 'react-animate-on-scroll';
 import ExampleSection from '../components/home/examplesection'
 
 
