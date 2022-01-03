@@ -11,7 +11,7 @@ function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        {/* TODO: APP META HEAD */}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
       </Head>
       <ChakraProvider theme={theme}>
         <Layout>
