@@ -5,6 +5,8 @@ import { AnimatePresence } from 'framer-motion'
 import Layout from "../components/layout/main"
 import Head from "next/head"
 
+import "@fontsource/ubuntu"
+
 function App({ Component, pageProps }) {
   return (
     <>
