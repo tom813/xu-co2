@@ -7,16 +7,24 @@ const Navbar = () => {
 
     const [scrolled, setScrolled] = useState(false)
 
+    const callhook = false
+
     useEffect(() => {
-        //TODO: Could maybe be more performant..
-        window.onscroll = function (e) {
-            if (window.scrollY >= 5) {
-                setScrolled(true)
-            } else if (window.scrollY < 5) {
-                setScrolled(false)
-            }
-        }
+        window.addEventListener('scroll', onScroll)
     }, [])
+
+    const onScroll = () => {
+        if (window.scrollY >= 20 && !callhook) {
+            callhook = true
+            setScrolled(true)
+        } else if (window.scrollY < 20 && callhook) {
+            callhook = false
+            setScrolled(false)
+        }
+    }
+
+    const bs = useColorModeValue('0px 0px 35px 5px rgba(200,200,200,0.26)', "0px 0px 35px 5px #1b1b1e")
+
 
     return (
         <Box
@@ -25,7 +33,7 @@ const Navbar = () => {
             position="fixed"
             zIndex="2"
             bg={useColorModeValue('#fff', "#202023")}
-            boxShadow={scrolled ? useColorModeValue('0px 0px 35px 5px rgba(200,200,200,0.26)', "0px 0px 35px 5px #1b1b1e") : "none"}
+            boxShadow={scrolled ? bs : "none"}
             transform={scrolled ? "scale(1.003)" : "none"}
             transition="400ms ease"
         >
