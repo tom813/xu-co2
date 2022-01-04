@@ -1,24 +1,4 @@
-import { useRouter } from 'next/router'
-import { Box, Flex, Heading, Image, Text, Button } from '@chakra-ui/react'
-
-// export async function getStaticPaths(){
-//     var paths = []
-//     sampleRequests.map((sample) => (
-//         paths.push({params: {product: `${sample.id}`}})
-//     ))
-//     console.log(paths)
-//     return{
-//         paths: paths,
-//         fallback: false
-//     }
-// }
-
-// export async function getStaticProps(context){
-//     return{
-//         props: {productData: sampleRequests[parseInt(context.params.product) - 1]}
-//     }
-
-// }
+import { Box, Flex, Heading, Text, Button } from '@chakra-ui/react'
 
 export async function getServerSideProps({ params }) {
     const result = await fetch(`https://xu-co2.vercel.app/api/branch/${params.product}`)

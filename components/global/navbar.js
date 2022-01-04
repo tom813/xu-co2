@@ -34,13 +34,13 @@ const Navbar = () => {
             zIndex="2"
             bg={useColorModeValue('#fff', "#202023")}
             boxShadow={scrolled ? bs : "none"}
-            transform={scrolled ? "scale(1.003)" : "none"}
-            transition="400ms ease"
+            transform={scrolled ? "scale(1.003); translatey(-2px)" : "none"}
+            transition="200ms ease"
             zIndex="3"
         >
-            <Grid templateColumns="repeat(6, 1fr)" w="100%" h="100%">
+            <Grid templateColumns="repeat(6, 1fr)" w="100%" h="100%" >
                 <GridItem colSpan={3}>
-                    <Flex justifyContent="flex-start" alignItems="center" h="100%" pl="50px">
+                    <Flex justifyContent="flex-start" alignItems="center" h="100%" pl="2rem">
                         <Link href="/">
                             <Button fontSize="1.5rem" _hover={{ transform: "none !important", boxShadow: "none !important" }} _active={{}} bg="transparent">
                                 Adressen
@@ -49,7 +49,7 @@ const Navbar = () => {
                     </Flex>
                 </GridItem>
                 <GridItem colSpan={3}>
-                    <Flex justifyContent="flex-end" alignItems="center" h="100%" pr="50px">
+                    <Flex justifyContent="flex-end" alignItems="center" h="100%" pr="2rem">
                         <Box mr="10px">
                             <Link href="/overview">
                                 <Button
