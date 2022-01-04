@@ -1,6 +1,7 @@
-import { Box, Flex, Heading, Img, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Button, Flex, Heading, Img, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react"
 import { useRef, useEffect } from "react"
 import { gsap } from "gsap/dist/gsap"
+import Link from "next/link"
 
 import { Row, Col } from "react-bootstrap"
 
@@ -16,12 +17,6 @@ const HookSection = () => {
                 start: "-10%",
                 end: "bottom 50%",
                 scrub: 1,
-                snap: {
-                    snapTo: "labels", // snap to the closest label in the timeline
-                    duration: { min: 1, max: 3 }, // the snap animation should be at least 0.2 seconds, but no more than 3 seconds (determined by velocity)
-                    delay: 0.3, // wait 0.2 seconds from the last scroll event before doing the snapping
-                    ease: "power1" // the ease of the snap animation ("power3" by default)
-                }
             }
         })
 
@@ -56,7 +51,10 @@ const HookSection = () => {
                     position="relative"
                 >
                     <Heading as="h2">Adressen Kaufen</Heading>
-                    <Text>Lorem Ipsum..</Text>
+                    <Text pl="2px">Lorem Ipsum..</Text>
+                    <Box mt="20px">
+                        <Link href="/overview"><Button colorScheme={useColorModeValue('purple', 'orange')}>Jetzt Kaufen</Button></Link>
+                    </Box>
                 </Flex>
                 <Flex position="relative" justifyContent="center" alignItems="center">
                     <Flex h={[350, 400]} w={[350, 400]} backdropFilter="blur(28px)" zIndex="2" borderRadius="20px" justifyContent="center" alignItems="center">

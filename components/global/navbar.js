@@ -31,7 +31,6 @@ const Navbar = () => {
             w="100vw"
             h="85px"
             position="fixed"
-            zIndex="2"
             bg={useColorModeValue('#fff', "#202023")}
             boxShadow={scrolled ? bs : "none"}
             transform={scrolled ? "scale(1.003); translatey(-2px)" : "none"}
