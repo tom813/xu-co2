@@ -3,6 +3,13 @@ import { Box, Flex, Heading, Text, Button } from '@chakra-ui/react'
 export async function getServerSideProps({ params }) {
     const result = await fetch(`https://xu-co2.vercel.app/api/branch/${params.product}`)
     const data = await result.json()
+
+    if (data.length == 0) {
+        return {
+            notFound: true,
+        }
+    }
+
     return {
         props: {
             productData: data[0]
@@ -11,8 +18,6 @@ export async function getServerSideProps({ params }) {
 }
 
 const ProductPage = ({ productData }) => {
-
-    //TODO: Check if productData has the right value and render appropriatly
 
     return (
         <Box w="100%" maxW="1400px" margin="0 auto" padding="0 2%">
