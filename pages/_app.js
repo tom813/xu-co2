@@ -5,13 +5,8 @@ import { AnimatePresence } from 'framer-motion'
 import Layout from "../components/layout/main"
 import Head from "next/head"
 import "@fontsource/montserrat-alternates"
-import { gsap } from "gsap/dist/gsap"
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
 
 function App({ Component, pageProps }) {
-
-  gsap.registerPlugin(ScrollTrigger);
 
   return (
     <>

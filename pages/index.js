@@ -4,6 +4,7 @@ import { Flex } from "@chakra-ui/react"
 import HookSection from '../components/home/hooksection'
 import AdvantagesSection from '../components/home/advantagessection'
 import ExampleSection from '../components/home/examplesection'
+import ConversionSection from '../components/home/conversionsection'
 
 
 const Home = () => {
@@ -24,6 +25,10 @@ const Home = () => {
           <AdvantagesSection />
         </Section>
         {/* </ScrollAnimation> */}
+
+        <Section>
+          <ConversionSection />
+        </Section>
 
         <Section>
           <ExampleSection />

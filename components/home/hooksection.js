@@ -1,71 +1,40 @@
-import { Box, Button, Flex, Heading, Img, SimpleGrid, Text, useColorModeValue } from "@chakra-ui/react"
-import { useRef, useEffect } from "react"
-import { gsap } from "gsap/dist/gsap"
+import { Box, Button, Flex, Heading, Img, SimpleGrid, Text, useBreakpointValue, useColorModeValue } from "@chakra-ui/react"
 import Link from "next/link"
-
-import { Row, Col } from "react-bootstrap"
 
 const HookSection = () => {
 
-    const gradientRef = useRef()
-    const sectionRef = useRef()
-
-    useEffect(() => {
-        let tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: sectionRef.current,
-                start: "-10%",
-                end: "bottom 50%",
-                scrub: 1,
-            }
-        })
-
-        tl.addLabel("start")
-            .to(gradientRef.current, { rotate: 20 })
-            .addLabel('end');
-
-        // gsap.to(gradientRef.current, {
-        //     scrollTrigger: "#hooksection",
-        //     x: 500
-        // })
-    })
-
     return (
-        <section ref={sectionRef}>
-            < SimpleGrid
+        <section>
+            < Flex
                 w="100%"
-                h="91vh"
                 // transform="translatey(-85px)"
+                h="600px"
                 justifyContent="center"
                 alignItems="center"
-                minChildWidth="400px"
+                flexDirection={useBreakpointValue({ base: "column", md: "row" })}
             >
                 <Flex
+                    flex={1}
                     alignItems="flex-start"
                     justifyContent="center"
                     flexDirection="column"
                     p="15px"
-                    w="400px"
+                    transform="translatey(30px)"
+                    h="full"
                     borderRadius="20px"
-                    zIndex="2"
-                    position="relative"
+                    order={useBreakpointValue({ base: "2", md: "1" })}
                 >
                     <Heading as="h2">Adressen Kaufen</Heading>
                     <Text pl="2px">Lorem Ipsum..</Text>
                     <Box mt="20px">
-                        <Link href="/overview"><Button colorScheme={useColorModeValue('purple', 'orange')}>Jetzt Kaufen</Button></Link>
+                        <Link href="/overview"><Button colorScheme="telegram" _hover={{ boxShadow: "0px 4px 15px 5px rgba(0, 136, 204, .2) !important" }}>Jetzt Kaufen</Button></Link>
                     </Box>
                 </Flex>
-                <Flex position="relative" justifyContent="center" alignItems="center">
-                    <Flex h={[350, 400]} w={[350, 400]} backdropFilter="blur(28px)" zIndex="2" borderRadius="20px" justifyContent="center" alignItems="center">
-                        <Img src="/images/illustrations/map-pin-iso-clay.png" zIndex="2" position="relative" width="350px" height="auto" />
-                    </Flex>
-                    <Box h={[350, 400]} w={[350, 400]} top="50%" left="50%" transform="translate(-50%, -50%)" zIndex="1" borderRadius="20px" overflow="hidden" position="absolute">
-                        <Img src="/images/illustrations/gradients/gradient-mesh.jpg" transform="scale(1.4) translatey(30px) rotate(-10deg)" filter='saturate(2)' ref={gradientRef} />
-                    </Box>
+                <Flex flex={1} order={useBreakpointValue({ base: "1", md: "2" })} w="full" backdropFilter="blur(28px)" zIndex="2" borderRadius="20px" justifyContent="center" alignItems="center">
+                    <Img src="/images/illustrations/laptop-3d.png" zIndex="2" position="relative" width="350px" height="auto" />
                 </Flex>
 
-            </SimpleGrid >
+            </Flex >
         </section >
     )
 }
