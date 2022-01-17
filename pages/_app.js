@@ -5,11 +5,13 @@ import { AnimatePresence } from 'framer-motion'
 import Layout from "../components/layout/main"
 import Head from "next/head"
 
+import "@fontsource/ubuntu"
+
 function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        {/* TODO: APP META HEAD */}
+        {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" /> */}
       </Head>
       <ChakraProvider theme={theme}>
         <Layout>

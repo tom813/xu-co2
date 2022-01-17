@@ -1,20 +1,35 @@
 import Section from '../components/global/section'
 import Layout from '../components/layout/article'
-import { Box, Heading } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
+import HookSection from '../components/home/hooksection'
+import AdvantagesSection from '../components/home/advantagessection'
+import ExampleSection from '../components/home/examplesection'
+
 
 const Home = () => {
   return (
     <Layout title="Homepage">
-      <Box
-        h="100vh"
+      <Flex
         w="100%"
+        justifyContent="center"
+        flexDirection="column"
       >
-        <Section>
-          <Heading as="h1">Was geht ab</Heading>
-          <Box w="100%" h="200px" bg="blue"></Box>
+
+        <Section delay={0.1}>
+          <HookSection />
         </Section>
-      </Box>
-    </Layout>
+
+        {/* <ScrollAnimation animateIn="fadeInLeft" duration={0.4} delay={0.5}> */}
+        <Section>
+          <AdvantagesSection />
+        </Section>
+        {/* </ScrollAnimation> */}
+
+        <Section>
+          <ExampleSection />
+        </Section>
+      </Flex>
+    </Layout >
   )
 }
 
