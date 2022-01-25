@@ -21,7 +21,6 @@ export async function getStaticPaths(){
     sampleRequests.map((sample) => (
         paths.push({params: {product: `${sample.id}`}})
     ))
-    console.log(paths)
     return{
         paths: paths,
         fallback: false
