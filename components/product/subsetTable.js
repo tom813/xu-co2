@@ -12,10 +12,9 @@ import { Table, Thead, Tbody, Tfoot, Tr, Th, Td, TableCaption, Box} from '@chakr
           </Tr>
         </Thead>
         <Tbody>
-          {console.log(tableData)}
           {tableData.map((state) => {
             return(
-              <Tr>
+              <Tr key={state.state}>
                 <Td>{state.state}</Td>
                 <Td>{state.num_of_entries}</Td>
                 <Td isNumeric>{state.price}</Td>
