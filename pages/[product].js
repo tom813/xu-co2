@@ -1,5 +1,8 @@
 import {useRouter} from 'next/router'
-import { Box, Flex, Heading, Image, Text, Button, useColorModeValue, Tabs, TabList, Tab, TabPanel, TabPanels, useToast, StatGroup, Stat, StatLabel, StatNumber } from '@chakra-ui/react'
+import dynamic from 'next/dynamic'
+import { Box, Flex, Heading, Image, Text, Button, useColorModeValue,  useToast, StatGroup, Stat, StatLabel, StatNumber } from '@chakra-ui/react'
+const Tabs = dynamic(import('@chakra-ui/react').then(mod => mod.Tabs), {ssr: false})
+import { TabList, Tab, TabPanel, TabPanels} from '@chakra-ui/react'
 import DataExample from '../components/product/dataExample'
 import SubsetTable from '../components/product/subsetTable'
 import BarChart from '../components/product/barChart'
