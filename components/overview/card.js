@@ -1,6 +1,6 @@
-import { Box, Flex, Heading, Img, Text, useColorModeValue } from "@chakra-ui/react"
+import { Box, Button, Flex, Heading, Img, Text, useColorModeValue } from "@chakra-ui/react"
 
-const Card = ({ icon, title, description }) => {
+const Card = ({ icon, title, description, button, buttonFunc }) => {
     return (
         <Flex
             flexDirection="column"
@@ -18,6 +18,7 @@ const Card = ({ icon, title, description }) => {
             <Box flex={3}>
                 <Text textAlign="center">{description}</Text>
             </Box>
+            <Button>Info</Button>
         </Flex>
     )
 }

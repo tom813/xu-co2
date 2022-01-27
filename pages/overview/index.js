@@ -21,7 +21,7 @@ const Overview = () => {
             </Text>
           </Box>
           <Box flex={1}>
-            <Image src='https://via.placeholder.com/400x300'></Image>
+            <Image src="/images/icons/book-color.png"></Image>
           </Box>
         </Flex>
       </Section>
