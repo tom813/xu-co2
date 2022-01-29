@@ -1,17 +1,26 @@
-import { Box, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Img, Text, useColorModeValue } from "@chakra-ui/react"
 
-function Card(){
-  return (
-    <Box maxW='300px' p={10} border='1px solid' borderColor='gray.200'>
-      <Image src='https://via.placeholder.com/200x100'></Image>
-      <Heading fontSize='large'>
-        Card Header
-      </Heading>
-      <Text>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, deleniti.
-      </Text>
-    </Box>
-  );
+const Card = ({ icon, title, description, button, buttonFunc }) => {
+    return (
+        <Flex
+            flexDirection="column"
+            alignItems="center"
+            borderRadius="50px"
+            w="full"
+            h="300px"
+            boxShadow={useColorModeValue('20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;', '30px 30px 60px #1b1b1e, -30px -30px 60px #252528;')}
+            p="20px"
+        >
+            <Img src={icon} flex={6} h="100px" />
+            <Flex flex={3} alignItems="center">
+                <Heading as="h3" fontSize="1.6rem">{title}</Heading>
+            </Flex>
+            <Box flex={3}>
+                <Text textAlign="center">{description}</Text>
+            </Box>
+            <Button>Info</Button>
+        </Flex>
+    )
 }
 
-export default Card;
+export default Card

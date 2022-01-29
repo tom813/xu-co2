@@ -1,4 +1,4 @@
-import {Image, Flex, Container, Text, Heading, Center, SimpleGrid} from '@chakra-ui/react';
+import {Image, Flex, Box, Text, Heading, Center, SimpleGrid} from '@chakra-ui/react';
 import Card from '../../components/overview/card';
 import Layout from '../../components/layout/article';
 import Section from '../../components/global/section';
@@ -6,26 +6,28 @@ import Section from '../../components/global/section';
 const Overview = () => {
   let cards = [];
   for(let i = 0; i < 6; i++){
-    cards.push(<Card/>);
+    cards.push(<Card key={i} icon={'/images/icons/sheild-front-color.png'} title={'Lorem ipsum'} description={'lLorem ipsum dolor sit amet consectetur adipiLorem ipsum dolor sit amet consectetur adipiorem'}/>);
   }
 
   return (
     <Layout>
       <Section>
         <Heading>Branche Übersicht</Heading>
-        <Flex>
-          <Container>
+        <Flex flexDirection={'row'}>
+          <Box flex={2}>
             <Text>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestiae quibusdam esse eaque impedit a! Enim reprehenderit debitis neque ullam!
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quibusdam suscipit voluptatum accusamus aperiam quisquam error labore aspernatur nulla numquam?
             </Text>
-          </Container>
-          <Image src='https://via.placeholder.com/400x300'></Image>
+          </Box>
+          <Box flex={1}>
+            <Image src="/images/icons/book-color.png"></Image>
+          </Box>
         </Flex>
       </Section>
 
       <Section>
-        <Center>
+        <Center mb={8}>
           <Heading>Overview</Heading>
         </Center>
         <SimpleGrid columns={3} spacing={10} mb='2em'>
