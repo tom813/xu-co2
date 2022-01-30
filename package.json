@@ -13,12 +13,15 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@fontsource/ubuntu": "^4.5.0",
+    "apexcharts": "^3.33.0",
     "framer-motion": "^5.5.5",
     "next": "12.0.7",
     "next-translate": "^1.2.0",
     "react": "17.0.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "17.0.2",
+    "react-minimal-pie-chart": "^8.2.0",
+    "sass": "^1.49.0",
     "serverless-mysql": "^1.5.4"
   },
   "devDependencies": {

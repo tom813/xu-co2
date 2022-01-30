@@ -1,5 +1,6 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import '../styles/globals.css'
+import '../styles/globals.scss'
+import '../styles/card.scss'
 import theme from "../lib/theme/theme"
 import { AnimatePresence } from 'framer-motion'
 import Layout from "../components/layout/main"

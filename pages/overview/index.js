@@ -28,7 +28,7 @@ const Overview = () => {
         <Center>
           <Heading>Overview</Heading>
         </Center>
-        <SimpleGrid columns={3} spacing={10} mb='2em'>
+        <SimpleGrid columns={3} spacing={5} mb='5em'>
           {cards}
         </SimpleGrid>
       </Section>
