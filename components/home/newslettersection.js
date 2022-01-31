@@ -82,7 +82,7 @@ const NewsletterSection = () => {
               <Box
                 onClick={() =>
                   toast({
-                    title: "Download successfull.",
+                    title: "Subscription successfull.",
                     status: "success",
                     duration: 2000,
                     isClosable: true,
