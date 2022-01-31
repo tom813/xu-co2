@@ -1,12 +1,11 @@
-import { ChakraProvider } from '@chakra-ui/react'
-import '../styles/globals.scss'
-import '../styles/card.scss'
-import theme from "../lib/theme/theme"
-import { AnimatePresence } from 'framer-motion'
-import Layout from "../components/layout/main"
-import Head from "next/head"
+import { ChakraProvider } from "@chakra-ui/react";
+import "../styles/globals.scss";
+import theme from "../lib/theme/theme";
+import { AnimatePresence } from "framer-motion";
+import Layout from "../components/layout/main";
+import Head from "next/head";
 
-import "@fontsource/ubuntu"
+import "@fontsource/ubuntu";
 
 function App({ Component, pageProps }) {
   return (
@@ -16,13 +15,13 @@ function App({ Component, pageProps }) {
       </Head>
       <ChakraProvider theme={theme}>
         <Layout>
-          <AnimatePresence exitBeforeEnter initial={true} >
+          <AnimatePresence exitBeforeEnter initial={true}>
             <Component {...pageProps} />
           </AnimatePresence>
         </Layout>
       </ChakraProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
