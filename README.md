@@ -14,6 +14,12 @@ https://nextjs.org/
 We also used a CSS Library called Chakra 
 https://chakra-ui.com/
 
+## Local dev usage
+`yarn run dev`
+
+## Build
+`yarn run build`
+
 ## Page structure
 
 '/' main page here the user can find general information
