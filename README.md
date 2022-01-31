@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Team Project for CO2 of Ben, Philipp and Tom
 
-## Getting Started
+## Project aim
 
-First, run the development server:
+We wanted to create a small real world online shop for buying adresses. The users should get a well structured page as well as enough information about the data he is buying. We also wanted to go with a fresh layout. 
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Project technologies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Because this is mainly a frontend project but we also have to make some database calls, we choosed next.js as our framework. 
+https://nextjs.org/
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+We also used a CSS Library called Chakra 
+https://chakra-ui.com/
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Page structure
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+'/' main page here the user can find general information
 
-## Learn More
+'/overview' overview page here we list all of our products and some information
 
-To learn more about Next.js, take a look at the following resources:
+'/[product]' product page the url is generated after the name of the product and the user can find all information about the product here
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### /components
 
-## Deploy on Vercel
+Here we defined our reusable Elements and our sections.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### lib
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Here we made our database call
+
+### pages
+
+Each file in this folder results in a route. If you create a file test.js it will be reachable under localhost:300/test same with folders
+
+In the api folder we defined our backend routes and the logic
+
+The other files and folders are for our frontend
+
+### public
+
+Here we listed all our sources like images, icons and download files
+
+### styles
+
+Here we would make our stylings bit we have chakra for that
