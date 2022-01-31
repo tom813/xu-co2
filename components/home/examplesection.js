@@ -85,7 +85,7 @@ const ExampleSection = () => {
             </Heading>
             <Text mb="30px">
               See how our data is structured and which information are included
-              in the different datasets{" "}
+              in the different datasets
             </Text>
 
             <Link href="/overview">
