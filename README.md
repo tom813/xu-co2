@@ -1,5 +1,7 @@
 # Team Project for CO2 of Ben, Philipp and Tom
 
+https://xu-co2.vercel.app/de
+
 ## Project aim
 
 We wanted to create a small real world online shop for buying adresses. The users should get a well structured page as well as enough information about the data he is buying. We also wanted to go with a fresh layout. 
@@ -11,6 +13,12 @@ https://nextjs.org/
 
 We also used a CSS Library called Chakra 
 https://chakra-ui.com/
+
+## Local dev usage
+`yarn run dev`
+
+## Build
+`yarn run build`
 
 ## Page structure
 
