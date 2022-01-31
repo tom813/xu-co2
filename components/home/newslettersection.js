@@ -10,12 +10,14 @@ import {
   Input,
   FormControl,
   FormLabel,
+  useToast
 } from "@chakra-ui/react";
 import DataExample from "../product/dataExample";
 import Link from "next/link";
 import { useState } from "react";
 
 const NewsletterSection = () => {
+  const toast = useToast();
   const [email, setEmail] = useState("");
 
   const handleSubmit = async (e) => {
@@ -77,13 +79,27 @@ const NewsletterSection = () => {
                   onChange={(e) => setEmail(e.target.value)}
                 ></Input>
               </FormControl>
-              <Button
-                mt="20px"
-                colorScheme={useColorModeValue("purple", "orange")}
-                onClick={handleSubmit}
+              <Box
+                onClick={() =>
+                  toast({
+                    title: "Download successfull.",
+                    status: "success",
+                    duration: 2000,
+                    isClosable: true,
+                  })
+                }
               >
-                subscribe now
-              </Button>
+                <Button
+                  mt="20px"
+                  colorScheme={useColorModeValue("purple", "orange")}
+                  onClick={handleSubmit}
+                  
+                  
+                >
+                  subscribe now
+                </Button>
+              </Box>
+              
             </Flex>
           </form>
         </Flex>

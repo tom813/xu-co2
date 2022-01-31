@@ -8,6 +8,7 @@ import BarChart from "../components/product/barChart";
 import NewsletterSection from "../components/home/newslettersection";
 
 const Home = () => {
+  
   return (
     <Layout title="Homepage">
       <Flex w="100%" justifyContent="center" flexDirection="column">
