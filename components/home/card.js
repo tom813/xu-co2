@@ -5,9 +5,9 @@ const Card = ({ icon, title, description }) => {
         <Flex
             flexDirection="column"
             alignItems="center"
-            borderRadius="50px"
+            borderRadius="10px"
             w="full"
-            h="300px"
+            h="320px"
             boxShadow={useColorModeValue('20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;', '30px 30px 60px #1b1b1e, -30px -30px 60px #252528;')}
             p="20px"
         >

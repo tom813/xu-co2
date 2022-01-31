@@ -1,4 +1,4 @@
-/* import React from "react"
+import React from "react"
 import {PieChart} from 'react-minimal-pie-chart'
 
 class CircleBar extends React.Component{
@@ -14,4 +14,4 @@ class CircleBar extends React.Component{
     }
 }
 
-export default CircleBar */
+export default CircleBar

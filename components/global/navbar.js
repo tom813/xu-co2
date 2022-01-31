@@ -42,7 +42,7 @@ const Navbar = () => {
                     <Flex justifyContent="flex-start" alignItems="center" h="100%" pl="50px">
                         <Link href="/">
                             <Button fontSize="1.5rem" _hover={{ transform: "none !important", boxShadow: "none !important" }} _active={{}} bg="transparent">
-                                Adressen
+                                Adresses
                             </Button>
                         </Link>
                     </Flex>
@@ -54,7 +54,7 @@ const Navbar = () => {
                                 <Button
                                     letterSpacing="1px"
                                     transition="200ms ease">
-                                    Übersicht
+                                    overview
                                 </Button>
                             </Link>
                         </Box>

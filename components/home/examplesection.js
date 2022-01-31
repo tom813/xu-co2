@@ -1,4 +1,5 @@
 import { Box, Button, Flex, Heading, Img, Text, useColorModeValue } from "@chakra-ui/react"
+import DataExample from "../product/dataExample"
 
 const ExampleSection = () => {
     return (
@@ -9,13 +10,25 @@ const ExampleSection = () => {
                 justifyContent="center"
                 alignItems="center"
             >
-                <Flex alignItems="center" h="400px" w="full" justifyContent="space-between">
-                    <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" h="full">
-                        <Heading as="h2" mb="15px" >Konfiguration mit Code</Heading>
-                        <Text mb="30px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia molestiae quibusdam esse eaque impedit a!</Text>
-                        <Button colorScheme={useColorModeValue('purple', 'orange')}>Los</Button>
+                <Flex alignItems="baseline" h="400px" w="full" justifyContent="space-between">
+                    <Flex alignItems="flex-start" flexDirection="column" justifyContent="center" h="full" flex="0 0 45%">
+                        <Heading as="h2" mb="15px" >Data examples</Heading>
+                        <Text mb="30px">See how our data is structured and which information are included in the different datasets </Text>
+                        <Button colorScheme={useColorModeValue('purple', 'orange')}>Go</Button>
                     </Flex>
-                    <Box bg="gray" w="full" h="full" borderRadius="xl" />
+                    <Box flex="1 0 55%">
+                    <DataExample
+                    
+                    Code={{
+                    Name: "Mustermann Limited",
+                    Branch: "Dentist",
+                    Adress: "Hauptstraße 42",
+                    City: "Coruscant",
+                    Phone: "0176 662607015",
+                    Website: "www.localhost.com",
+                    Email: "hmu@local.host"
+                }} />
+                    </Box>
                 </Flex>
             </Flex>
         </section>

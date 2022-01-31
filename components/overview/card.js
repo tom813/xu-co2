@@ -3,7 +3,8 @@ import { AtSignIcon, PhoneIcon, EmailIcon, CalendarIcon } from '@chakra-ui/icons
 import BarChart from '../product/barChart';
 
 
-function Card(){
+
+function Card({branchData}){
   return (
     <Box maxW='md' borderWidth='1px' borderRadius='lg' overflow='hidden'>
         <Flex w="100%" justifyContent="center" alignItems="center" position="relative">
@@ -15,7 +16,7 @@ function Card(){
       <Box p='6'>
         <Box display='flex' alignItems='baseline'>
           <Badge borderRadius='full' px='2'>
-          47695 entries
+          {branchData.num_of_entries} entries
           </Badge>
           
         </Box>
@@ -28,11 +29,11 @@ function Card(){
           isTruncated
           fontSize="1.5rem"
         >
-          Dentists
+          {branchData.name}
         </Box>
 
         <Box mb=".3rem">
-          €1199
+          €{branchData.price}
           <Box as='span' color='gray.600' fontSize='sm'>
             
           </Box>
@@ -41,19 +42,19 @@ function Card(){
             <Tag size='lg' variant='subtle'>
                 <TagLeftIcon as={EmailIcon} />
                 <TagLabel>
-                    97%
+                    {branchData.email_coverage}%
                 </TagLabel>
             </Tag>
             <Tag size='lg' variant='subtle'>
                 <TagLeftIcon as={CalendarIcon} />
                 <TagLabel>
-                    88%
+                    {branchData.adress_coverage}%
                 </TagLabel>
             </Tag>
             <Tag size='lg' variant='subtle'>
                 <TagLeftIcon as={PhoneIcon} />
                 <TagLabel>
-                    95%
+                    {branchData.phone_coverage}%
                 </TagLabel>
             </Tag>
             
@@ -65,4 +66,4 @@ function Card(){
   );
 }
 
-export default Card;
+export default Card

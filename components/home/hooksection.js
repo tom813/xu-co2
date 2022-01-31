@@ -15,8 +15,8 @@ const HookSection = () => {
                     alignItems="center"
                     flexDirection="column"
                 >
-                    <Heading as="h2">Adressen Kaufen</Heading>
-                    <Text>Lorem Ipsum..</Text>
+                    <Heading as="h2">buy adresses</Heading>
+                    <Text>fast and save</Text>
                 </Flex>
                 <Img src="/images/illustrations/laptop-3d.png" width="600px" height="600px" transform="translatex(80px)" />
             </Flex>
